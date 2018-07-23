@@ -4,6 +4,8 @@
   "description": "A graphql api for data.police.uk",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "production": "node index.js --production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gavin Henderson",
