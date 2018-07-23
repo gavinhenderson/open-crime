@@ -1,17 +1,10 @@
 const express = require('express');
-const { buildSchema } = require('graphql');
 const graphqlHTTP = require('express-graphql');
+const schema = require('./graphql/schema');
 const PORT = 8000;
 
-const schema = buildSchema(
-  `type Query {
-    hello: String
-  }`
-);
-
-const rootValue = {
-  hello: () => 'World'
-};
+// root resolver
+const rootValue = require('./resolver');
 
 const app = express();
 app.use(
