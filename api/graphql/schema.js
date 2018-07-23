@@ -1,6 +1,12 @@
 const schema = `
+type Force {
+  id: String
+  name: String
+}
+
 type Query {
   hello: String
+  forces: [Force]
 }
 `;
 
