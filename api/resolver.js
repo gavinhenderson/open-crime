@@ -1,8 +1,9 @@
-const { forces } = require('./routes');
+const { forces, force } = require('./routes');
 
 const resolver = {
   hello: () => 'World',
-  forces
+  forces,
+  force
 };
 
 module.exports = resolver;
