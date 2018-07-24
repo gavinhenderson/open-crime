@@ -31,11 +31,16 @@ type Person {
   rank: String
 }
 
+type Date {
+  date: String
+}
+
 type Query {
   hello: String
   forces: [Force]
   force(forceId: String): ForceInfo
   forcePeople(forceId: String): [Person]
+  lastUpdated: Date
 }
 `;
 
