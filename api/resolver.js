@@ -1,9 +1,10 @@
-const { forces, force } = require('./routes');
+const { forces, force, forcePeople } = require('./routes');
 
 const resolver = {
   hello: () => 'World',
   forces,
-  force
+  force,
+  forcePeople
 };
 
 module.exports = resolver;

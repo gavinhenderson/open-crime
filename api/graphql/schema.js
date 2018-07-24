@@ -20,10 +20,22 @@ type ForceInfo {
   name: String
 }
 
+type ContactDetails {
+  twitter: String
+}
+
+type Person {
+  bio: String
+  contact_details: ContactDetails
+  name: String
+  rank: String
+}
+
 type Query {
   hello: String
   forces: [Force]
   force(forceId: String): ForceInfo
+  forcePeople(forceId: String): [Person]
 }
 `;
 
