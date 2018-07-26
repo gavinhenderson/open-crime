@@ -8,7 +8,7 @@ A GraphQL based API for all of the crime stats available
 - Specific Force [DONE]
 - Force Officers [DONE]
 - Last Updated [DONE]
-- Street Level Crimes (Need to add crime category)
+- Street Level Crimes [DONE]
 - Street Level Outcomes
 - Crimes at Location
 - Crimes with no location

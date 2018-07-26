@@ -14,7 +14,9 @@ module.exports = async data => {
     location += locations.join(':');
   }
 
-  const url = `https://data.police.uk/api/crimes-street/all-crime?${location}${date}`;
+  const crimeCategory = data.crimeCategory ? data.crimeCategory : 'all-crime';
+
+  const url = `https://data.police.uk/api/crimes-street/${crimeCategory}?${location}${date}`;
   console.log(url);
 
   const result = await request.get(url);

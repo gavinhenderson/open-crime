@@ -74,7 +74,7 @@ type Query {
   force(forceId: String): ForceInfo
   forcePeople(forceId: String): [Person]
   lastUpdated: Date
-  streetLevelCrimes(location: [InputLocation], date: String): [StreetCrime]
+  streetLevelCrimes(location: [InputLocation], date: String, crimeCategory: String): [StreetCrime]
 }
 `;
 
