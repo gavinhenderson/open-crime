@@ -68,6 +68,29 @@ input InputLocation {
   long: String
 }
 
+type Category {
+  name: String
+  code: String
+}
+
+type Crime {
+  category: String
+  location_type: String
+  location: SpecificLocation
+  context: String
+  persistent_id: String
+  id: Int
+  location_subtype: String
+  month: String
+}
+
+type StreetLevelOutcome {
+  category: Category
+  date: String
+  person_id: String
+  crime: Crime
+}
+
 type Query {
   hello: String
   forces: [Force]
@@ -75,6 +98,8 @@ type Query {
   forcePeople(forceId: String): [Person]
   lastUpdated: Date
   streetLevelCrimes(location: [InputLocation], date: String, crimeCategory: String): [StreetCrime]
+  streetLevelOutcomesByCoords(location: [InputLocation], date: String): [StreetLevelOutcome]
+  streetLevelOutcomesByLocationId(locationId: String, date: String): [StreetLevelOutcome]
 }
 `;
 

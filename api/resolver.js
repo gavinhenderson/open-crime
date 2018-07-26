@@ -3,7 +3,9 @@ const {
   force,
   forcePeople,
   lastUpdated,
-  streetLevelCrimes
+  streetLevelCrimes,
+  streetLevelOutcomesByCoords,
+  streetLevelOutcomesByLocationId
 } = require('./routes');
 
 const resolver = {
@@ -12,7 +14,9 @@ const resolver = {
   force,
   forcePeople,
   lastUpdated,
-  streetLevelCrimes
+  streetLevelCrimes,
+  streetLevelOutcomesByCoords,
+  streetLevelOutcomesByLocationId
 };
 
 module.exports = resolver;
