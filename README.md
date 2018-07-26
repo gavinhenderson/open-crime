@@ -2,6 +2,11 @@
 
 A GraphQL based API for all of the crime stats available
 
+## General To-Dos
+
+- Remove duplicated schema
+- Make sure &s are right
+
 ## API To-Dos
 
 - Forces [DONE]
