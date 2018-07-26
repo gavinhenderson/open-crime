@@ -22,24 +22,4 @@ module.exports = async data => {
   const result = await request.get(url);
 
   return JSON.parse(result);
-  // return [
-  //   {
-  //     category: 'anti-social-behaviour',
-  //     location_type: 'Force',
-  //     location: {
-  //       latitude: '52.640961',
-  //       street: {
-  //         id: 884343,
-  //         name: 'On or near Wharf Street North'
-  //       },
-  //       longitude: '-1.126371'
-  //     },
-  //     context: '',
-  //     outcome_status: null,
-  //     persistent_id: '',
-  //     id: 54164419,
-  //     location_subtype: '',
-  //     month: '2017-01'
-  //   }
-  // ];
 };
