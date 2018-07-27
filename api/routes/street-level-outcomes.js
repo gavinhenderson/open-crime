@@ -11,11 +11,14 @@ const streetLevelOutcomesByCoords = async data => {
   return JSON.parse(result);
 };
 
-const streetLevelOutcomesByLocationId = async (data) => {
-  const locationIdUrlPart = data.locationId ? `location_id=${data.locationId}` : '';
-  const dateUrlPart = `&date=${data.date}` : '';
-  const url =
-}
+const streetLevelOutcomesByLocationId = async data => {
+  const locationIdUrlPart = data.locationId
+    ? `location_id=${data.locationId}`
+    : '';
+  const dateUrlPart = true ? `&date=${data.date}` : '';
+  const url = '';
+  return [];
+};
 
 module.exports = {
   streetLevelOutcomesByCoords,
