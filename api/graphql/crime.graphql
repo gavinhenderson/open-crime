@@ -1,0 +1,12 @@
+# import SpecificLocation from "specific-location.graphql"
+
+type Crime {
+  category: String
+  location_type: String
+  location: SpecificLocation
+  context: String
+  persistent_id: String
+  id: Int
+  location_subtype: String
+  month: String
+}

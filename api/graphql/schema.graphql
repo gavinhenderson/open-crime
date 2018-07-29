@@ -1,0 +1,28 @@
+# import Force from "force.graphql"
+# import ForceInfo from "force-info.graphql"
+# import Person from "person.graphql"
+# import Date from "date.graphql"
+# import InputLocation from "input-location.graphql"
+# import StreetCrime from "street-crime.graphql"
+# import StreetLevelOutcome from "street-level-outcome.graphql"
+
+type Query {
+  hello: String
+  forces: [Force]
+  force(forceId: String): ForceInfo
+  forcePeople(forceId: String): [Person]
+  lastUpdated: Date
+  streetLevelCrimes(
+    location: [InputLocation]
+    date: String
+    crimeCategory: String
+  ): [StreetCrime]
+  streetLevelOutcomesByCoords(
+    location: [InputLocation]
+    date: String
+  ): [StreetLevelOutcome]
+  streetLevelOutcomesByLocationId(
+    locationId: String
+    date: String
+  ): [StreetLevelOutcome]
+}

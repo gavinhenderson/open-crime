@@ -1,0 +1,10 @@
+# import EngagementMethod from "engagement-method.graphql"
+
+type ForceInfo {
+  description: String
+  url: String
+  engagement_methods: [EngagementMethod]
+  telephone: String
+  id: String
+  name: String
+}

@@ -1,0 +1,6 @@
+type EngagementMethod {
+  url: String
+  type: String
+  description: String
+  title: String
+}

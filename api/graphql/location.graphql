@@ -1,0 +1,4 @@
+type Location {
+  lat: String
+  long: String
+}

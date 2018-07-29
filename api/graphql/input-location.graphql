@@ -1,0 +1,4 @@
+input InputLocation {
+  lat: String
+  long: String
+}

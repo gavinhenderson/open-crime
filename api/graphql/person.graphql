@@ -1,0 +1,8 @@
+# import ContactDetails from "contact-details.graphql"
+
+type Person {
+  bio: String
+  contact_details: ContactDetails
+  name: String
+  rank: String
+}

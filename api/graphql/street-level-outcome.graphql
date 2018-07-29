@@ -1,0 +1,9 @@
+# import Crime from "crime.graphql"
+# import Category from "category.graphql"
+
+type StreetLevelOutcome {
+  category: Category
+  date: String
+  person_id: String
+  crime: Crime
+}

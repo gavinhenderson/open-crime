@@ -1,0 +1,7 @@
+# import Street from "street.graphql"
+
+type SpecificLocation {
+  latitude: String
+  longitude: String
+  street: Street
+}
