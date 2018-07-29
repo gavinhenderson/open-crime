@@ -1,3 +1,17 @@
 type ContactDetails {
+  email: String
+  telephone: String
+  mobile: String
+  fax: String
+  web: String
+  address: String
+  facebook: String
   twitter: String
+  youtube: String
+  myspace: String
+  bebo: String
+  flickr: String
+  forum: String
+  blog: String
+  rss: String
 }

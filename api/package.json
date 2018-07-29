@@ -4,14 +4,17 @@
   "description": "A graphql api for data.police.uk",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "./node_modules/nodemon/bin/nodemon.js index.js",
+    "start": "npm run docs; node index.js",
+    "dev": "./node_modules/.bin/nodemon index.js --config nodemon.json",
     "production": "node index.js --production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "npm run schema; ./node_modules/.bin/graphdoc -s ./schema.graphql -o ./docs/ --force",
+    "schema": "node ./graphql"
   },
   "author": "Gavin Henderson",
   "license": "ISC",
   "dependencies": {
+    "@2fd/graphdoc": "^2.4.0",
     "express": "^4.16.3",
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
