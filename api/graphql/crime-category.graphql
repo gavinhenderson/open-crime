@@ -1,0 +1,4 @@
+type CrimeCategory {
+  url: String
+  name: String
+}

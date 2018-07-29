@@ -30,6 +30,14 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  crimeCategoriesWithoutDate: crimeCategories {
+    name
+    url
+  }
+  crimeCategoriesWithDate: crimeCategories(date: "2011-08") {
+    name
+    url
+  }
   crimeNoLocationWithDate: crimesNoLocation(
     category: "all-crime"
     force: "leicestershire"

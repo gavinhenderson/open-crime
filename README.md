@@ -19,7 +19,7 @@ A GraphQL based API for all of the crime stats available
 - Street Level Outcomes [DONE]
 - Crimes at Location [DONE]
 - Crimes with no location [DONE]
-- Crime categories
+- Crime categories [DONE]
 - Outcomes for specific crime
 - Neighbourhoods
 - Specific Neighbourhood
