@@ -58,4 +58,9 @@ type Query {
   outcomeForCrime(persistentId: String): CrimeOutcome
 
   neighbourhoods(force: String): [Neighbourhood]
+
+  # specificNeighbourhood(
+  #force: String
+  #neighbourhood: String
+  #): NeighbourhoodDetails
 }
