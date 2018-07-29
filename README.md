@@ -5,7 +5,6 @@ A GraphQL based API for all of the crime stats available
 ## General To-Dos
 
 - Make sure '&'s are right
-- Add a middleware? for JSON parse the result of request.get
 
 ## API To-Dos
 

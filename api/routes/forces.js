@@ -1,6 +1,7 @@
-const request = require('request-promise');
+const request = require("request-promise");
 
 module.exports = async () => {
-  const result = await request.get('https://data.police.uk/api/forces');
-  return JSON.parse(result);
+  const url = "https://data.police.uk/api/forces";
+  const result = await request.get({ url, json: true });
+  return result;
 };
