@@ -30,6 +30,10 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  neighbourhoods(force: "leicestershire") {
+    id
+    name
+  }
   outcomeForCrime(
     persistentId: "590d68b69228a9ff95b675bb4af591b38de561aa03129dc09a03ef34f537588c"
   ) {

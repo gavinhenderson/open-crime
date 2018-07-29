@@ -6,6 +6,7 @@ const streetLevelCrimes = require("./street-level-crimes");
 const crimesNoLocation = require("./crimes-no-location");
 const crimeCategories = require("./crime-categories");
 const outcomeForCrime = require("./outcome-for-crime");
+const neighbourhoods = require("./neighbourhoods");
 const {
   streetLevelOutcomesByCoords,
   streetLevelOutcomesByLocationId
@@ -27,5 +28,6 @@ module.exports = {
   crimesAtLocationByLocationId,
   crimesNoLocation,
   crimeCategories,
-  outcomeForCrime
+  outcomeForCrime,
+  neighbourhoods
 };
