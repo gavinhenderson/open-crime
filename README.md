@@ -7,6 +7,7 @@ A GraphQL based API for all of the crime stats available
 - Write some tests
 - Look into mass code duplication
 - Investigate a proxy route for things where the url is static (forces, last updated)
+- All routes need error handling
 
 ## API To-Dos
 
@@ -17,7 +18,7 @@ A GraphQL based API for all of the crime stats available
 - Street Level Crimes [DONE]
 - Street Level Outcomes [DONE]
 - Crimes at Location [DONE]
-- Crimes with no location
+- Crimes with no location [DONE]
 - Crime categories
 - Outcomes for specific crime
 - Neighbourhoods

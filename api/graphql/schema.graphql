@@ -43,4 +43,10 @@ type Query {
     locationId: String
     date: String
   ): [CrimeWithOutcome]
+
+  crimesNoLocation(
+    category: String
+    force: String
+    date: String
+  ): [CrimeWithOutcome]
 }
