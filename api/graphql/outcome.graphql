@@ -1,0 +1,7 @@
+# import Category from "category.graphql"
+
+type Outcome {
+  category: Category
+  date: String
+  person_id: String
+}

@@ -20,7 +20,7 @@ A GraphQL based API for all of the crime stats available
 - Crimes at Location [DONE]
 - Crimes with no location [DONE]
 - Crime categories [DONE]
-- Outcomes for specific crime
+- Outcomes for specific crime [DONE]
 - Neighbourhoods
 - Specific Neighbourhood
 - Neighbourhood boundary

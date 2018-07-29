@@ -1,0 +1,7 @@
+# import Crime from "crime.graphql"
+# import Outcome from "outcome.graphql"
+
+type CrimeOutcome {
+  crime: Crime
+  outcomes: [Outcome]
+}

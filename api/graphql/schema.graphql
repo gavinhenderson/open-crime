@@ -7,6 +7,7 @@
 # import StreetLevelOutcome from "street-level-outcome.graphql"
 # import CrimeWithOutcome from "crime-with-outcome.graphql"
 # import CrimeCategory from "crime-category.graphql"
+# import CrimeOutcome from "crime-outcome.graphql"
 
 type Query {
   hello: String
@@ -52,4 +53,6 @@ type Query {
   ): [CrimeWithOutcome]
 
   crimeCategories(date: String): [CrimeCategory]
+
+  outcomeForCrime(persistentId: String): CrimeOutcome
 }
