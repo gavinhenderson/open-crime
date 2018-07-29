@@ -1,22 +1,8 @@
-const {
-  forces,
-  force,
-  forcePeople,
-  lastUpdated,
-  streetLevelCrimes,
-  streetLevelOutcomesByCoords,
-  streetLevelOutcomesByLocationId
-} = require('./routes');
+const routes = require("./routes");
 
 const resolver = {
-  hello: () => 'World',
-  forces,
-  force,
-  forcePeople,
-  lastUpdated,
-  streetLevelCrimes,
-  streetLevelOutcomesByCoords,
-  streetLevelOutcomesByLocationId
+  hello: () => "World",
+  ...routes
 };
 
 module.exports = resolver;

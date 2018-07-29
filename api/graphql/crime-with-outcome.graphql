@@ -1,0 +1,18 @@
+# import SpecificLocation from "specific-location.graphql"
+
+type OutcomeStatus {
+  category: String
+  date: String
+}
+
+type CrimeWithOutcome {
+  category: String
+  location_type: String
+  location: SpecificLocation
+  context: String
+  persistent_id: String
+  id: Int
+  location_subtype: String
+  month: String
+  outcome_status: OutcomeStatus
+}

@@ -30,6 +30,100 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  crimesByLocationIdWithoutDate: crimesAtLocationByLocationId(
+    locationId: "883498"
+  ) {
+    category
+    location_type
+    location {
+      latitude
+      longitude
+      street {
+        id
+        name
+      }
+    }
+    context
+    persistent_id
+    id
+    location_subtype
+    month
+    outcome_status {
+      category
+      date
+    }
+  }
+  crimesByLocationIdWithDate: crimesAtLocationByLocationId(
+    locationId: "883498"
+    date: "2017-01"
+  ) {
+    category
+    location_type
+    location {
+      latitude
+      longitude
+      street {
+        id
+        name
+      }
+    }
+    context
+    persistent_id
+    id
+    location_subtype
+    month
+    outcome_status {
+      category
+      date
+    }
+  }
+  singleLocationCrimesWithoutDate: crimesAtLocationByCoords(
+    location: $Location
+  ) {
+    category
+    location_type
+    location {
+      latitude
+      longitude
+      street {
+        id
+        name
+      }
+    }
+    context
+    persistent_id
+    id
+    location_subtype
+    month
+    outcome_status {
+      category
+      date
+    }
+  }
+  singleLocationCrimesWithDate: crimesAtLocationByCoords(
+    location: $Location
+    date: "2017-01"
+  ) {
+    category
+    location_type
+    location {
+      latitude
+      longitude
+      street {
+        id
+        name
+      }
+    }
+    context
+    persistent_id
+    id
+    location_subtype
+    month
+    outcome_status {
+      category
+      date
+    }
+  }
   outcomesByLocationIdWithoutDate: streetLevelOutcomesByLocationId(
     locationId: "883498"
   ) {
