@@ -4,7 +4,8 @@ A GraphQL based API for all of the crime stats available
 
 ## General To-Dos
 
-- Make sure '&'s are right
+- Write some tests
+- Investigate a proxy route for things where the url is static (forces, last updated)
 
 ## API To-Dos
 
@@ -13,7 +14,7 @@ A GraphQL based API for all of the crime stats available
 - Force Officers [DONE]
 - Last Updated [DONE]
 - Street Level Crimes [DONE]
-- Street Level Outcomes
+- Street Level Outcomes [DONE]
 - Crimes at Location
 - Crimes with no location
 - Crime categories

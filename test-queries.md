@@ -30,6 +30,171 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  outcomesByLocationIdWithoutDate: streetLevelOutcomesByLocationId(
+    locationId: "883498"
+  ) {
+    date
+    person_id
+    category {
+      name
+      code
+    }
+    crime {
+      category
+      location_type
+      location {
+        latitude
+        longitude
+        street {
+          id
+          name
+        }
+      }
+      context
+      persistent_id
+      id
+      location_subtype
+      month
+    }
+  }
+  outcomesByLocationIdWithDate: streetLevelOutcomesByLocationId(
+    locationId: "883498"
+    date: "2017-01"
+  ) {
+    date
+    person_id
+    category {
+      name
+      code
+    }
+    crime {
+      category
+      location_type
+      location {
+        latitude
+        longitude
+        street {
+          id
+          name
+        }
+      }
+      context
+      persistent_id
+      id
+      location_subtype
+      month
+    }
+  }
+  singleLocationOutcomesWithoutDate: streetLevelOutcomesByCoords(
+    location: $Location
+  ) {
+    date
+    person_id
+    category {
+      name
+      code
+    }
+    crime {
+      category
+      location_type
+      location {
+        latitude
+        longitude
+        street {
+          id
+          name
+        }
+      }
+      context
+      persistent_id
+      id
+      location_subtype
+      month
+    }
+  }
+  multipleLocationOutcomesWithoutDate: streetLevelOutcomesByCoords(
+    location: $MultipleLocations
+  ) {
+    date
+    person_id
+    category {
+      name
+      code
+    }
+    crime {
+      category
+      location_type
+      location {
+        latitude
+        longitude
+        street {
+          id
+          name
+        }
+      }
+      context
+      persistent_id
+      id
+      location_subtype
+      month
+    }
+  }
+  singleLocationOutcomesWithDate: streetLevelOutcomesByCoords(
+    location: $Location
+    date: "2017-01"
+  ) {
+    date
+    person_id
+    category {
+      name
+      code
+    }
+    crime {
+      category
+      location_type
+      location {
+        latitude
+        longitude
+        street {
+          id
+          name
+        }
+      }
+      context
+      persistent_id
+      id
+      location_subtype
+      month
+    }
+  }
+  multipleLocationOutcomesWithDate: streetLevelOutcomesByCoords(
+    location: $MultipleLocations
+    date: "2017-01"
+  ) {
+    date
+    person_id
+    category {
+      name
+      code
+    }
+    crime {
+      category
+      location_type
+      location {
+        latitude
+        longitude
+        street {
+          id
+          name
+        }
+      }
+      context
+      persistent_id
+      id
+      location_subtype
+      month
+    }
+  }
   differentCategory: streetLevelCrimes(
     location: $Location
     crimeCategory: "anti-social-behaviour"

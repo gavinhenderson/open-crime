@@ -1,23 +1,27 @@
-const request = require('request-promise');
-const { getLocationUrlPart } = require('./utils');
+const request = require("request-promise");
+const { getLocationUrlPart } = require("./utils");
+
+const streetLevelOutcomes = async (date, locationUrlPart) => {
+  const dateUrlPart = date ? `date=${date}&` : "";
+  const url = `https://data.police.uk/api/outcomes-at-location?${dateUrlPart}${locationUrlPart}`;
+  const result = await request.get({ url, json: true });
+  return result;
+};
 
 const streetLevelOutcomesByCoords = async data => {
   const locationUrlPart = data.location
     ? getLocationUrlPart(data.location)
-    : '';
-  const dateUrlPart = data.date ? `&date=${data.date}` : '';
-  const url = `https://data.police.uk/api/outcomes-at-location?${dateUrlPart}&${locationUrlPart}`;
-  const result = await request.get(url);
-  return JSON.parse(result);
+    : "";
+  const date = data.date || null;
+  return await streetLevelOutcomes(date, locationUrlPart);
 };
 
 const streetLevelOutcomesByLocationId = async data => {
-  const locationIdUrlPart = data.locationId
+  const locationUrlPart = data.locationId
     ? `location_id=${data.locationId}`
-    : '';
-  const dateUrlPart = true ? `&date=${data.date}` : '';
-  const url = '';
-  return [];
+    : "";
+  const date = data.date || null;
+  return await streetLevelOutcomes(date, locationUrlPart);
 };
 
 module.exports = {
