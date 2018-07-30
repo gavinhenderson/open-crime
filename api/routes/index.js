@@ -10,6 +10,7 @@ const neighbourhoods = require('./neighbourhoods');
 const specificNeighbourhood = require('./specific-neighbourhood');
 const neighbourhoodBoundary = require('./neighbourhood-boundary');
 const neighbourhoodTeam = require('./neighbourhood-team');
+const neighbourhoodEvents = require('./neighbourhood-events');
 const {
   streetLevelOutcomesByCoords,
   streetLevelOutcomesByLocationId
@@ -35,5 +36,6 @@ module.exports = {
   neighbourhoods,
   specificNeighbourhood,
   neighbourhoodBoundary,
-  neighbourhoodTeam
+  neighbourhoodTeam,
+  neighbourhoodEvents
 };

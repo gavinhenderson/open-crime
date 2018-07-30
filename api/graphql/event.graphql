@@ -1,0 +1,11 @@
+# import ContactDetails from "contact-details.graphql"
+
+type Event {
+  contact_details: ContactDetails
+  description: String
+  title: String
+  address: String
+  type: String
+  start_date: String
+  end_date: String
+}

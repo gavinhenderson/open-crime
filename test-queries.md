@@ -30,6 +30,19 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  neighbourhoodEvents(force: "leicestershire", neighbourhood: "NC04") {
+    description
+    title
+    address
+    type
+    start_date
+    end_date
+    contact_details {
+      twitter
+      email
+      telephone
+    }
+  }
   neighbourhoodBoundary(force: "leicestershire", neighbourhood: "NC04") {
     longitude
     latitude
