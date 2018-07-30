@@ -8,6 +8,7 @@ const crimeCategories = require('./crime-categories');
 const outcomeForCrime = require('./outcome-for-crime');
 const neighbourhoods = require('./neighbourhoods');
 const specificNeighbourhood = require('./specific-neighbourhood');
+const neighbourhoodBoundary = require('./neighbourhood-boundary');
 const {
   streetLevelOutcomesByCoords,
   streetLevelOutcomesByLocationId
@@ -31,5 +32,6 @@ module.exports = {
   crimeCategories,
   outcomeForCrime,
   neighbourhoods,
-  specificNeighbourhood
+  specificNeighbourhood,
+  neighbourhoodBoundary
 };

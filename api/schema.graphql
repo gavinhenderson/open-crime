@@ -14,6 +14,7 @@ type Query {
   outcomeForCrime(persistentId: String): CrimeOutcome
   neighbourhoods(force: String): [Neighbourhood]
   specificNeighbourhood(force: String, neighbourhood: String): NeighbourhoodDetails
+  neighbourhoodBoundary(force: String, neighbourhood: String): [ExactLocation]
 }
 
 type Force {
@@ -104,6 +105,11 @@ type NeighbourhoodDetails {
   locations: [PostalAddress]
 }
 
+type ExactLocation {
+  longitude: String
+  latitude: String
+}
+
 type EngagementMethod {
   url: String
   type: String
@@ -171,11 +177,6 @@ type Link {
   url: String
   description: String
   title: String
-}
-
-type ExactLocation {
-  longitude: String
-  latitude: String
 }
 
 type PostalAddress {

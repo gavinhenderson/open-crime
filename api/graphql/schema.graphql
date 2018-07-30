@@ -10,6 +10,7 @@
 # import CrimeOutcome from "crime-outcome.graphql"
 # import Neighbourhood from "neighbourhood.graphql"
 # import NeighbourhoodDetails from "neighbourhood-details.graphql"
+# import ExactLocation from "exact-location.graphql"
 
 type Query {
   hello: String
@@ -64,4 +65,6 @@ type Query {
     force: String
     neighbourhood: String
   ): NeighbourhoodDetails
+
+  neighbourhoodBoundary(force: String, neighbourhood: String): [ExactLocation]
 }
