@@ -1,0 +1,9 @@
+type PostalAddress {
+  name: String
+  longitude: String
+  address: String
+  postcode: String
+  latitude: String
+  type: String
+  description: String
+}

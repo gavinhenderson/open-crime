@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run docs; node index.js",
-    "dev": "./node_modules/.bin/nodemon index.js --config nodemon.json",
+    "dev": "./node_modules/.bin/nodemon index.js",
     "production": "node index.js --production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs": "npm run schema; ./node_modules/.bin/graphdoc -s ./schema.graphql -o ./docs/ --force",

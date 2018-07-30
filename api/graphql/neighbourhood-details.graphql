@@ -1,0 +1,16 @@
+# import ContactDetails from "contact-details.graphql"
+# import Link from "link.graphql"
+# import ExactLocation from "exact-location.graphql"
+# import PostalAddress from "postal-address.graphql"
+
+type NeighbourhoodDetails {
+  url_force: String
+  contact_details: ContactDetails
+  name: String
+  links: [Link]
+  centre: ExactLocation
+  description: String
+  id: String
+  population: String
+  locations: [PostalAddress]
+}

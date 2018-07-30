@@ -30,6 +30,37 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  specificNeighbourhood(force: "leicestershire", neighbourhood: "NC04") {
+    url_force
+    contact_details {
+      twitter
+      facebook
+      email
+      telephone
+    }
+    name
+    links {
+      description
+      title
+      url
+    }
+    centre {
+      latitude
+      longitude
+    }
+    description
+    id
+    population
+    locations {
+      name
+      longitude
+      address
+      postcode
+      latitude
+      type
+      description
+    }
+  }
   neighbourhoods(force: "leicestershire") {
     id
     name

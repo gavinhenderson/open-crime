@@ -1,0 +1,5 @@
+type Link {
+  url: String
+  description: String
+  title: String
+}

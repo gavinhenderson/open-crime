@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./styles/graphdoc.css" />
-    <title>ContactDetails</title>
+    <title>NeighbourhoodDetails</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet"><link type="text/css" rel="stylesheet" href="./assets/code.css" /><link type="text/css" rel="stylesheet" href="./assets/require-by.css" />
 </head>
 <body class="slds-scrollable--y">
@@ -75,7 +75,7 @@
                 Category
             </a>
         </li>
-        <li class="slds-is-active" title="ContactDetails">
+        <li  title="ContactDetails">
             <a href="contactdetails.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 ContactDetails
             </a>
@@ -135,7 +135,7 @@
                 Neighbourhood
             </a>
         </li>
-        <li  title="NeighbourhoodDetails">
+        <li class="slds-is-active" title="NeighbourhoodDetails">
             <a href="neighbourhooddetails.doc.html" class="slds-navigation-list--vertical__action slds-text-link--reset slds-truncate">
                 NeighbourhoodDetails
             </a>
@@ -256,7 +256,7 @@
     </div>
     <div class="container">
         <p class="slds-text-title--caps slds-text-color--weak">OBJECT</p>
-        <h1 class="slds-text-heading--large">ContactDetails</h1>
+        <h1 class="slds-text-heading--large">NeighbourhoodDetails</h1>
         <div class="slds-text-body--regular"></div>
     </div>
 </section>
@@ -268,7 +268,7 @@
             </a>
             GraphQL Schema definition
         </h2>
-        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">ContactDetails</span> {</li><li></li><li><span class="tab"><span class="meta">email</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">telephone</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">mobile</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">fax</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">web</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">address</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">facebook</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">twitter</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">youtube</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">myspace</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">bebo</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">flickr</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">forum</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">blog</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">rss</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li>}</li></ul></code>
+        <code class="highlight"><ul class="code" style="padding-left:42px"><li><span class="keyword operator ts">type</span> <span class="identifier">NeighbourhoodDetails</span> {</li><li></li><li><span class="tab"><span class="meta">url_force</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">contact_details</span>: <a class="support type" href="contactdetails.doc.html">ContactDetails</a> </span></li><li></li><li><span class="tab"><span class="meta">name</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">links</span>: [<a class="support type" href="link.doc.html">Link</a>] </span></li><li></li><li><span class="tab"><span class="meta">centre</span>: <a class="support type" href="exactlocation.doc.html">ExactLocation</a> </span></li><li></li><li><span class="tab"><span class="meta">description</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">id</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">population</span>: <a class="support type" href="string.doc.html">String</a> </span></li><li></li><li><span class="tab"><span class="meta">locations</span>: [<a class="support type" href="postaladdress.doc.html">PostalAddress</a>] </span></li><li>}</li></ul></code>
     </div>
 </section>
 <section>
@@ -279,7 +279,7 @@
             </a>
             Require by
         </h2>
-        <ul class="require-by"><li><a href="neighbourhooddetails.doc.html" title="NeighbourhoodDetails - ">NeighbourhoodDetails<em></em></a><li><li><a href="person.doc.html" title="Person - ">Person<em></em></a><li></ul>
+        <ul class="require-by"><li><a href="query.doc.html" title="Query - ">Query<em></em></a><li></ul>
     </div>
 </section>
 <footer>

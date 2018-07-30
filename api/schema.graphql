@@ -13,6 +13,7 @@ type Query {
   crimeCategories(date: String): [CrimeCategory]
   outcomeForCrime(persistentId: String): CrimeOutcome
   neighbourhoods(force: String): [Neighbourhood]
+  specificNeighbourhood(force: String, neighbourhood: String): NeighbourhoodDetails
 }
 
 type Force {
@@ -91,6 +92,18 @@ type Neighbourhood {
   name: String
 }
 
+type NeighbourhoodDetails {
+  url_force: String
+  contact_details: ContactDetails
+  name: String
+  links: [Link]
+  centre: ExactLocation
+  description: String
+  id: String
+  population: String
+  locations: [PostalAddress]
+}
+
 type EngagementMethod {
   url: String
   type: String
@@ -152,4 +165,25 @@ type Outcome {
   category: Category
   date: String
   person_id: String
+}
+
+type Link {
+  url: String
+  description: String
+  title: String
+}
+
+type ExactLocation {
+  longitude: String
+  latitude: String
+}
+
+type PostalAddress {
+  name: String
+  longitude: String
+  address: String
+  postcode: String
+  latitude: String
+  type: String
+  description: String
 }

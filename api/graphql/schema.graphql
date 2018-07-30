@@ -9,6 +9,7 @@
 # import CrimeCategory from "crime-category.graphql"
 # import CrimeOutcome from "crime-outcome.graphql"
 # import Neighbourhood from "neighbourhood.graphql"
+# import NeighbourhoodDetails from "neighbourhood-details.graphql"
 
 type Query {
   hello: String
@@ -59,8 +60,8 @@ type Query {
 
   neighbourhoods(force: String): [Neighbourhood]
 
-  # specificNeighbourhood(
-  #force: String
-  #neighbourhood: String
-  #): NeighbourhoodDetails
+  specificNeighbourhood(
+    force: String
+    neighbourhood: String
+  ): NeighbourhoodDetails
 }
