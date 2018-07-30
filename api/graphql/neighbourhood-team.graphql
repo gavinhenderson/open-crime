@@ -1,0 +1,8 @@
+# import ContactDetails from "contact-details.graphql"
+
+type NeighbourhoodTeam {
+  bio: String
+  contact_details: ContactDetails
+  name: String
+  rank: String
+}

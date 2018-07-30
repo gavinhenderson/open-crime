@@ -11,6 +11,7 @@
 # import Neighbourhood from "neighbourhood.graphql"
 # import NeighbourhoodDetails from "neighbourhood-details.graphql"
 # import ExactLocation from "exact-location.graphql"
+# import NeighbourhoodTeam from "neighbourhood-team.graphql"
 
 type Query {
   hello: String
@@ -67,4 +68,6 @@ type Query {
   ): NeighbourhoodDetails
 
   neighbourhoodBoundary(force: String, neighbourhood: String): [ExactLocation]
+
+  neighbourhoodTeam(force: String, neighbourhood: String): [NeighbourhoodTeam]
 }

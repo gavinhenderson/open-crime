@@ -22,9 +22,9 @@ A GraphQL based API for all of the crime stats available
 - Crime categories [DONE]
 - Outcomes for specific crime [DONE]
 - Neighbourhoods [DONE]
-- Specific Neighbourhood
-- Neighbourhood boundary
-- Neighbourhood team
+- Specific Neighbourhood [DONE]
+- Neighbourhood boundary [DONE]
+- Neighbourhood team [DONE]
 - Neighbourhood events
 - Neighbourhood priorities
 - Locate Neighbourhood
