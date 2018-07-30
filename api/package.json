@@ -19,8 +19,14 @@
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
     "graphql-import": "^0.6.0",
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.1.0",
     "nodemon": "^1.18.3",
     "request": "^2.87.0",
     "request-promise": "^4.2.2"
+  },
+  "devDependencies": {
+    "grunt-exec": "^3.0.0"
   }
 }
