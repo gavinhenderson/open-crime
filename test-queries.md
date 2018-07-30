@@ -30,6 +30,12 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  neighbourhoodPriorities(force: "leicestershire", neighbourhood: "NC04") {
+    action
+    issue_date
+    action_date
+    issue
+  }
   neighbourhoodEvents(force: "leicestershire", neighbourhood: "NC04") {
     description
     title

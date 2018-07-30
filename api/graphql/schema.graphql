@@ -13,6 +13,7 @@
 # import ExactLocation from "exact-location.graphql"
 # import NeighbourhoodTeam from "neighbourhood-team.graphql"
 # import Event from "event.graphql"
+# import Action from "action.graphql"
 
 type Query {
   hello: String
@@ -73,4 +74,6 @@ type Query {
   neighbourhoodTeam(force: String, neighbourhood: String): [NeighbourhoodTeam]
 
   neighbourhoodEvents(force: String, neighbourhood: String): [Event]
+
+  neighbourhoodPriorities(force: String, neighbourhood: String): [Action]
 }

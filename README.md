@@ -25,8 +25,8 @@ A GraphQL based API for all of the crime stats available
 - Specific Neighbourhood [DONE]
 - Neighbourhood boundary [DONE]
 - Neighbourhood team [DONE]
-- Neighbourhood events
-- Neighbourhood priorities
+- Neighbourhood events [DONE]
+- Neighbourhood priorities [DONE]
 - Locate Neighbourhood
 - Stop and searches by area
 - Stop and searches by location

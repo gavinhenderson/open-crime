@@ -1,0 +1,6 @@
+type Action {
+  action: String
+  issue_date: String
+  action_date: String
+  issue: String
+}
