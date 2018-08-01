@@ -30,6 +30,45 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  singleLocationStopAndSearchesWithoutDate: stopAndSearchByCoords(
+    location: $Location
+  ) {
+    age_range
+    self_defined_ethinicity
+    outcome_linked_to_object_of_search
+    datetime
+    removal_of_more_than_outer_clothing
+    operation
+    operation_name
+    location {
+      longitude
+      latitude
+    }
+    gender
+    officer_defined_ethnicity
+    legislation
+    outcome
+    type
+    object_of_search
+    involved_person
+  }
+  multipleLocationStopAndSearchesWithoutDate: stopAndSearchByCoords(
+    location: $MultipleLocations
+  ) {
+    age_range
+  }
+  singleLocationStopAndSearchesWithDate: stopAndSearchByCoords(
+    location: $Location
+    date: "2017-01"
+  ) {
+    age_range
+  }
+  multipleLocationStopAndSearchesWithDate: stopAndSearchByCoords(
+    location: $MultipleLocations
+    date: "2017-01"
+  ) {
+    age_range
+  }
   locateNeighbourhood(latitude: 51.500617, longitude: -0.124629) {
     force
     neighbourhood

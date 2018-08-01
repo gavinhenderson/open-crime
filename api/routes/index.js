@@ -13,6 +13,7 @@ const neighbourhoodTeam = require('./neighbourhood-team');
 const neighbourhoodEvents = require('./neighbourhood-events');
 const neighbourhoodPriorities = require('./neighbourhood-priorities');
 const locateNeighbourhood = require('./locate-neighbourhood');
+const stopAndSearchByCoords = require('./stop-and-search-by-coords');
 const {
   streetLevelOutcomesByCoords,
   streetLevelOutcomesByLocationId
@@ -41,5 +42,6 @@ module.exports = {
   neighbourhoodTeam,
   neighbourhoodEvents,
   neighbourhoodPriorities,
-  locateNeighbourhood
+  locateNeighbourhood,
+  stopAndSearchByCoords
 };

@@ -1,0 +1,19 @@
+# import SpecificLocation from "specific-location.graphql"
+
+type StopAndSearchData {
+  age_range: String
+  self_defined_ethinicity: String
+  outcome_linked_to_object_of_search: Boolean
+  datetime: String
+  removal_of_more_than_outer_clothing: String
+  operation: Boolean
+  operation_name: String
+  location: SpecificLocation
+  gender: String
+  officer_defined_ethnicity: String
+  legislation: String
+  outcome: Boolean
+  type: String
+  object_of_search: String
+  involved_person: Boolean
+}

@@ -15,6 +15,7 @@
 # import Event from "event.graphql"
 # import Action from "action.graphql"
 # import NeighbourhoodFromLocation from "neighbourhood-from-location.graphql"
+# import StopAndSearchData from "stop-and-search-data.graphql"
 
 type Query {
   hello: String
@@ -82,4 +83,9 @@ type Query {
     longitude: Float
     latitude: Float
   ): NeighbourhoodFromLocation
+
+  stopAndSearchByCoords(
+    location: [InputLocation]
+    date: String
+  ): [StopAndSearchData]
 }
