@@ -30,6 +30,10 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  locateNeighbourhood(latitude: 51.500617, longitude: -0.124629) {
+    force
+    neighbourhood
+  }
   neighbourhoodPriorities(force: "leicestershire", neighbourhood: "NC04") {
     action
     issue_date

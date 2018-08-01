@@ -4,7 +4,7 @@ const PORT = 8000;
 const { importSchema } = require('graphql-import');
 const { buildSchema } = require('graphql');
 const createSchema = location => buildSchema(importSchema(location));
-const schema = createSchema('schema.graphql');
+const schema = createSchema('graphql/schema.graphql');
 
 // root resolver
 const rootValue = require('./resolver');

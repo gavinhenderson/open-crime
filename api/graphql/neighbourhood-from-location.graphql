@@ -1,0 +1,4 @@
+type NeighbourhoodFromLocation {
+  force: String
+  neighbourhood: String
+}

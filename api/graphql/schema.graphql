@@ -14,6 +14,7 @@
 # import NeighbourhoodTeam from "neighbourhood-team.graphql"
 # import Event from "event.graphql"
 # import Action from "action.graphql"
+# import NeighbourhoodFromLocation from "neighbourhood-from-location.graphql"
 
 type Query {
   hello: String
@@ -76,4 +77,9 @@ type Query {
   neighbourhoodEvents(force: String, neighbourhood: String): [Event]
 
   neighbourhoodPriorities(force: String, neighbourhood: String): [Action]
+
+  locateNeighbourhood(
+    longitude: Float
+    latitude: Float
+  ): NeighbourhoodFromLocation
 }

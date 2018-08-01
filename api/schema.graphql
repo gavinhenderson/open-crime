@@ -18,6 +18,7 @@ type Query {
   neighbourhoodTeam(force: String, neighbourhood: String): [NeighbourhoodTeam]
   neighbourhoodEvents(force: String, neighbourhood: String): [Event]
   neighbourhoodPriorities(force: String, neighbourhood: String): [Action]
+  locateNeighbourhood(longitude: Float, latitude: Float): NeighbourhoodFromLocation
 }
 
 type Force {
@@ -135,6 +136,11 @@ type Action {
   issue_date: String
   action_date: String
   issue: String
+}
+
+type NeighbourhoodFromLocation {
+  force: String
+  neighbourhood: String
 }
 
 type EngagementMethod {
