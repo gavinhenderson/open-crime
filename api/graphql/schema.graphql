@@ -88,4 +88,9 @@ type Query {
     location: [InputLocation]
     date: String
   ): [StopAndSearchData]
+
+  stopAndSearchByLocationId(
+    locationId: String
+    date: String
+  ): [StopAndSearchData]
 }
