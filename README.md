@@ -31,4 +31,4 @@ A GraphQL based API for all of the crime stats available
 - Stop and searches by area [DONE]
 - Stop and searches by location [DONE]
 - Stop and searches with no location [DONE]
-- Stop and searches by force
+- Stop and searches by force [DONE]

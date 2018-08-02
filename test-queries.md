@@ -30,6 +30,51 @@ query AllEndPoints(
   $Location: [InputLocation]
   $MultipleLocations: [InputLocation]
 ) {
+  stopAndSearchByForceWithoutDate: stopAndSearchByForce(
+    force: "avon-and-somerset"
+  ) {
+    age_range
+    self_defined_ethinicity
+    outcome_linked_to_object_of_search
+    datetime
+    removal_of_more_than_outer_clothing
+    operation
+    operation_name
+    location {
+      longitude
+      latitude
+    }
+    gender
+    officer_defined_ethnicity
+    legislation
+    outcome
+    type
+    object_of_search
+    involved_person
+  }
+  stopAndSearchByForceWithDate: stopAndSearchByForce(
+    force: "avon-and-somerset"
+    date: "2017-01"
+  ) {
+    age_range
+    self_defined_ethinicity
+    outcome_linked_to_object_of_search
+    datetime
+    removal_of_more_than_outer_clothing
+    operation
+    operation_name
+    location {
+      longitude
+      latitude
+    }
+    gender
+    officer_defined_ethnicity
+    legislation
+    outcome
+    type
+    object_of_search
+    involved_person
+  }
   stopAndSearchNoLocationWithoutDate: stopAndSearchNoLocation(
     force: "cleveland"
   ) {

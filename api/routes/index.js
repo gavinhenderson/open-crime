@@ -16,6 +16,7 @@ const locateNeighbourhood = require('./locate-neighbourhood');
 const stopAndSearchByCoords = require('./stop-and-search-by-coords');
 const stopAndSearchByLocationId = require('./stop-and-search-by-location-id');
 const stopAndSearchNoLocation = require('./stop-and-search-no-location');
+const stopAndSearchByForce = require('./stop-and-search-by-force');
 const {
   streetLevelOutcomesByCoords,
   streetLevelOutcomesByLocationId
@@ -47,5 +48,6 @@ module.exports = {
   locateNeighbourhood,
   stopAndSearchByCoords,
   stopAndSearchByLocationId,
-  stopAndSearchNoLocation
+  stopAndSearchNoLocation,
+  stopAndSearchByForce
 };
