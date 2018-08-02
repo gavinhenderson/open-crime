@@ -8,6 +8,7 @@ yarn-error.log*
 # Docs
 api/docs
 api/schema.graphql
+.vscode
 
 # Runtime data
 pids
