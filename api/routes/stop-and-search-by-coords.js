@@ -1,7 +1,7 @@
 const request = require('request-promise');
 const { getLocationUrlPart } = require('./utils');
 
-const crimesAtLocationByCoords = async data => {
+const stopAndSearchByCoords = async data => {
   const locationUrlPart = data.location
     ? getLocationUrlPart(data.location)
     : '';
@@ -12,4 +12,4 @@ const crimesAtLocationByCoords = async data => {
   return result;
 };
 
-module.exports = crimesAtLocationByCoords;
+module.exports = stopAndSearchByCoords;

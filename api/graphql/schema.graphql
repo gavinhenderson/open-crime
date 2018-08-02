@@ -93,4 +93,6 @@ type Query {
     locationId: String
     date: String
   ): [StopAndSearchData]
+
+  stopAndSearchNoLocation(force: String, date: String): [StopAndSearchData]
 }
