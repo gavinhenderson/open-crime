@@ -60,7 +60,12 @@ const REACT_APP = /^REACT_APP_/i;
 
 function getClientEnvironment(publicUrl) {
   const raw = Object.keys(process.env)
-    .filter(key => REACT_APP.test(key) || key === 'MapboxAccessToken')
+    .filter(
+      key =>
+        REACT_APP.test(key) ||
+        key === 'MAPBOX_ACCESS_TOKEN' ||
+        key === 'MapboxAccessToken'
+    )
     .reduce(
       (env, key) => {
         env[key] = process.env[key];
