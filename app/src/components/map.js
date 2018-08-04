@@ -1,26 +1,8 @@
-import React from 'react';
-import ReactMapGL from 'react-map-gl';
+import React from "react";
 
 class Map extends React.Component {
-  state = {
-    viewport: {
-      width: 400,
-      height: 400,
-      latitude: 37.7577,
-      longitude: -122.4376,
-      zoom: 8
-    }
-  };
-
   render() {
-    console.log('TEST');
-    console.log(process.env);
-    return (
-      <ReactMapGL
-        {...this.state.viewport}
-        onViewportChange={viewport => this.setState({ viewport })}
-      />
-    );
+    return <div>This will be map soon</div>;
   }
 }
 
