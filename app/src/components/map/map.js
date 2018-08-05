@@ -8,11 +8,12 @@ import {
 
 class Map extends React.Component {
   state = {
-    markerPos: {
-      lat: 53.478311,
-      lng: -2.245347
-    }
+    markerPos: this.props.defaultLocation
   };
+
+  constructor(props) {
+    super(props);
+  }
 
   onMapClick = event => {
     this.setState({
@@ -21,6 +22,7 @@ class Map extends React.Component {
         lng: event.latLng.lng()
       }
     });
+    this.props.onLocationChange(event);
   };
 
   render() {

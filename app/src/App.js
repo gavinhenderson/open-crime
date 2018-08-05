@@ -2,10 +2,12 @@ import "styling/semantic.less";
 
 import React from "react";
 import { Button, Icon } from "semantic-ui-react";
-import { Map } from "./components";
+import { Home } from "./pages";
 
-const App = () => {
-  return <Map />;
-};
+class App extends React.Component {
+  render() {
+    return <Home />;
+  }
+}
 
 export default App;
