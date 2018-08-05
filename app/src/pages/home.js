@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
-import { Map } from "../components";
+import { Map, InfoArea } from "../components";
 
 class Home extends React.Component {
   state = {
@@ -28,7 +28,7 @@ class Home extends React.Component {
           <p>{this.state.mapLocation.lng}</p>
           <Button>test button</Button>
         </div>
-        {/* <InfoAccordion /> */}
+        <InfoArea />
       </div>
     );
   }
