@@ -1,6 +1,6 @@
-import React from "react";
-import { Button } from "semantic-ui-react";
-import { Map, InfoArea } from "../components";
+import React from 'react';
+import { Button } from 'semantic-ui-react';
+import { Map, InfoArea } from '../components';
 
 class Home extends React.Component {
   state = {
@@ -24,11 +24,9 @@ class Home extends React.Component {
           onLocationChange={this.onLocationChange}
         />
         <div>
-          <p>{this.state.mapLocation.lat}</p>
-          <p>{this.state.mapLocation.lng}</p>
-          <Button>test button</Button>
+          <Button>Update Location</Button>
         </div>
-        <InfoArea />
+        <InfoArea location={START_LOCATION} />
       </div>
     );
   }
