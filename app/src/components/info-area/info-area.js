@@ -22,16 +22,19 @@ class InfoArea extends React.Component {
         {({ loading, error, data }) => {
           if (loading) return <p>Loading...</p>;
           if (error) {
-            console.log('ERROR', error);
+            console.log(error);
             return null;
           }
 
           const { activeIndex } = this.state;
+          const { force } = data.locateNeighbourhood;
+
+          if (!force) return null;
 
           return (
             <Accordion styled>
               <Accordion.Title index={1} onClick={this.handleClick}>
-                Force Information
+                Force: {toTitleCase(force)}
               </Accordion.Title>
               <Accordion.Content active={activeIndex === 1}>
                 Test
@@ -46,9 +49,17 @@ class InfoArea extends React.Component {
 
 export default InfoArea;
 
+const toTitleCase = slugTitle => {
+  const titleArray = slugTitle.split('-');
+  const upperCasedArray = titleArray.map(
+    current => current[0].toUpperCase() + current.slice(1)
+  );
+  return upperCasedArray.join(' ');
+};
+
 const GET_INFO = gql`
   query getForceInfo($lng: Float, $lat: Float) {
-    locateNeighbourhood() {
+    locateNeighbourhood(latitude: $lat, longitude: $lng) {
       force
       neighbourhood
     }

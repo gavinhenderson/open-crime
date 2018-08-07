@@ -26,7 +26,7 @@ class Home extends React.Component {
         <div>
           <Button>Update Location</Button>
         </div>
-        <InfoArea location={START_LOCATION} />
+        <InfoArea location={this.state.mapLocation} />
       </div>
     );
   }
