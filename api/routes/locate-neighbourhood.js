@@ -10,7 +10,7 @@ module.exports = async data => {
     return result;
   } catch (error) {
     if (error.statusCode === 404) {
-      throw new Error('No force exists in this area');
+      return { force: null, neighbourhood: null };
     }
     throw error;
   }
