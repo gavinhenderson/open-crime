@@ -17,18 +17,35 @@ const ForceInfo = ({ force, handleClick, active, index }) => (
           return null;
         }
 
-        const { force } = data;
+        const { force, forcePeople } = data;
 
         if (!force) return null;
 
+        console.log(force.engagement_methods);
+        // console.log(forcePeople);
         return (
           <Accordion.Content active={active}>
-            <p>{force.url}</p>
+            {force.description && <p>{force.description}</p>}
+            {force.url && <p>{force.url}</p>}
+            {force.telephone && <p>{force.telephone}</p>}
+            {force.name && <p>{force.name}</p>}
+
+            {/* {forcePeople.map(person => ())}
+            {forcePeople.mma.engagement_methods.map((currentMethod, index) => (
+              <div key={`engagement_method_${index}`}>
+                {currentMethod.url && <div>{currentMethod.url}</div>}
+                {currentMethod.type && <div>{currentMethod.type}</div>}
+                {currentMethod.description && (
+                  <div>{currentMethod.description}</div>
+                )}
+
+                {currentMethod.title && <div>{currentMethod.title}</div>}
+              </div>
+            ))} */}
           </Accordion.Content>
         );
       }}
     </Query>
-    {/* */}
   </Accordion>
 );
 
@@ -47,6 +64,15 @@ const FORCE_INFO = gql`
         type
         description
         title
+      }
+    }
+    forcePeople(forceId: $forceId) {
+      bio
+      name
+      rank
+      contact_details {
+        email
+        twitter
       }
     }
   }
