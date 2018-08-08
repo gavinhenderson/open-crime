@@ -2,6 +2,7 @@ import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import { Accordion } from 'semantic-ui-react';
+import ForceInfo from '../force-info';
 
 class InfoArea extends React.Component {
   state = {
@@ -32,14 +33,12 @@ class InfoArea extends React.Component {
           if (!force) return null;
 
           return (
-            <Accordion styled>
-              <Accordion.Title index={1} onClick={this.handleClick}>
-                Force: {toTitleCase(force)}
-              </Accordion.Title>
-              <Accordion.Content active={activeIndex === 1}>
-                Test
-              </Accordion.Content>
-            </Accordion>
+            <ForceInfo
+              active={activeIndex === 1}
+              index={1}
+              force={force}
+              handleClick={this.handleClick}
+            />
           );
         }}
       </Query>
@@ -48,14 +47,6 @@ class InfoArea extends React.Component {
 }
 
 export default InfoArea;
-
-const toTitleCase = slugTitle => {
-  const titleArray = slugTitle.split('-');
-  const upperCasedArray = titleArray.map(
-    current => current[0].toUpperCase() + current.slice(1)
-  );
-  return upperCasedArray.join(' ');
-};
 
 const GET_INFO = gql`
   query getForceInfo($lng: Float, $lat: Float) {
