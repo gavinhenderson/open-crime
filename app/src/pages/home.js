@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { Map, InfoArea } from '../components';
+import { Map, InfoArea, NavBar } from '../components';
+import '../styling/nav-bar.less';
 
 class Home extends React.Component {
   state = {
@@ -19,6 +20,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <NavBar />
         <Map
           defaultLocation={START_LOCATION}
           onLocationChange={this.onLocationChange}

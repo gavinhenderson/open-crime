@@ -25,7 +25,9 @@ const ForceInfo = ({ force, handleClick, active, index }) => (
         // console.log(forcePeople);
         return (
           <Accordion.Content active={active}>
-            {force.description && <p>{force.description}</p>}
+            {force.description && (
+              <p>{force.description.replace(/<(?:.|\n)*?>/gm, '')}</p>
+            )}
             {force.url && <p>{force.url}</p>}
             {force.telephone && <p>{force.telephone}</p>}
             {force.name && <p>{force.name}</p>}
