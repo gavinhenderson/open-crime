@@ -4,6 +4,7 @@ import { Map, InfoArea, NavBar, Footer } from '../components';
 import '../styling/nav-bar.less';
 import '../styling/map.less';
 import '../styling/footer.less';
+import '../styling/home.less';
 
 class Home extends React.Component {
   state = {
@@ -21,15 +22,20 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
-        <NavBar />
-        <Map
-          defaultLocation={START_LOCATION}
-          onLocationChange={this.onLocationChange}
-          className={'map-container'}
-        />
-        <InfoArea location={this.state.mapLocation} />
-        <Footer />
+      <div className={'page-container'}>
+        <div className={'page-content'}>
+          <NavBar />
+          <Map
+            defaultLocation={START_LOCATION}
+            onLocationChange={this.onLocationChange}
+            className={'map-container'}
+          />
+
+          <InfoArea location={this.state.mapLocation} />
+        </div>
+        <div className={'page-footer'}>
+          <Footer />
+        </div>
       </div>
     );
   }
