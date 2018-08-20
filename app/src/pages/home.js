@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 import { Map, InfoArea, NavBar } from '../components';
 import '../styling/nav-bar.less';
+import '../styling/map.less';
 
 class Home extends React.Component {
   state = {
@@ -24,6 +25,7 @@ class Home extends React.Component {
         <Map
           defaultLocation={START_LOCATION}
           onLocationChange={this.onLocationChange}
+          className={'map-container'}
         />
         <div>
           <Button>Update Location</Button>
