@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { Map, InfoArea, NavBar } from '../components';
+import { Map, InfoArea, NavBar, Footer } from '../components';
 import '../styling/nav-bar.less';
 import '../styling/map.less';
+import '../styling/footer.less';
 
 class Home extends React.Component {
   state = {
@@ -27,10 +28,8 @@ class Home extends React.Component {
           onLocationChange={this.onLocationChange}
           className={'map-container'}
         />
-        <div>
-          <Button>Update Location</Button>
-        </div>
         <InfoArea location={this.state.mapLocation} />
+        <Footer />
       </div>
     );
   }
