@@ -15,7 +15,7 @@ const ForceInfo = ({ location }) => (
 
       const { force } = data.locateNeighbourhood;
 
-      if (!force) return <p>We don't have data for the foce in this area</p>;
+      if (!force) return <p>We don't have data for the force in this area</p>;
 
       return (
         <Query query={FORCE_INFO} variables={{ forceId: force }}>
@@ -23,15 +23,14 @@ const ForceInfo = ({ location }) => (
             if (loading) return <p>Loading...</p>;
             if (error) {
               console.log(error);
-              return <p>We don't have data for the foce in this area</p>;
+              return <p>We don't have data for the force in this area</p>;
             }
 
             const { force, forcePeople } = data;
 
             if (!force)
-              return <p>We don't have data for the foce in this area</p>;
+              return <p>We don't have data for the force in this area</p>;
 
-            console.log(force.engagement_methods);
             return (
               <div>
                 {force.name && (
@@ -63,18 +62,9 @@ const ForceInfo = ({ location }) => (
                   </p>
                 )}
 
-                {/* {forcePeople.map(person => ())}
-                    {forcePeople.mma.engagement_methods.map((currentMethod, index) => (
-                      <div key={`engagement_method_${index}`}>
-                        {currentMethod.url && <div>{currentMethod.url}</div>}
-                        {currentMethod.type && <div>{currentMethod.type}</div>}
-                        {currentMethod.description && (
-                          <div>{currentMethod.description}</div>
-                        )}
-
-                        {currentMethod.title && <div>{currentMethod.title}</div>}
-                      </div>
-                    ))} */}
+                {force.engagement_methods &&
+                  force.engagement_methods.length > 1 &&
+                  generateEngagementMethodsList(force.engagement_methods)}
               </div>
             );
           }}
@@ -83,6 +73,21 @@ const ForceInfo = ({ location }) => (
     }}
   </Query>
 );
+
+const generateEngagementMethodsList = engagement_methods => {
+  return (
+    <div>
+      <span className={'accordion-content-label'}>Engagement Methods: </span>
+      <ul>
+        {engagement_methods.map((currentMethod, index) => (
+          <li key={`engagement_method_${index}`}>
+            <a href={currentMethod.url}>{currentMethod.title}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 const removedProtocolFromUrl = url => {
   return url.split('//').pop();
