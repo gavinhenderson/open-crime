@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { Map, InfoArea, NavBar, Footer } from '../components';
+import { Map, AccordionGrid, NavBar, Footer } from '../components';
 import '../styling/nav-bar.less';
 import '../styling/map.less';
 import '../styling/footer.less';
@@ -31,7 +31,7 @@ class Home extends React.Component {
             className={'map-container'}
           />
 
-          <InfoArea location={this.state.mapLocation} />
+          <AccordionGrid location={this.state.mapLocation} />
         </div>
         <div className={'page-footer'}>
           <Footer />

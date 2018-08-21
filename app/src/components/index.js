@@ -1,7 +1,7 @@
 import Map from './map';
-import InfoArea from './info-area';
-import ForceInfo from './force-info';
 import NavBar from './nav-bar';
 import Footer from './footer';
+import AccordionGrid from './accordion-grid';
+import CustomAccordion from './custom-accordion';
 
-export { Map, InfoArea, ForceInfo, NavBar, Footer };
+export { Map, ForceInfo, NavBar, Footer, CustomAccordion, AccordionGrid };

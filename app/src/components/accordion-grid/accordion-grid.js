@@ -1,10 +1,9 @@
 import React from 'react';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
-import { Accordion } from 'semantic-ui-react';
-import ForceInfo from '../force-info';
+import { CustomAccordion } from '../';
 
-class InfoArea extends React.Component {
+class AccordionGrid extends React.Component {
   state = {
     activeIndex: 0
   };
@@ -33,12 +32,9 @@ class InfoArea extends React.Component {
           if (!force) return null;
 
           return (
-            <ForceInfo
-              active={activeIndex === 1}
-              index={1}
-              force={force}
-              handleClick={this.handleClick}
-            />
+            <CustomAccordion title="test" information="test">
+              <h1>test</h1>
+            </CustomAccordion>
           );
         }}
       </Query>
@@ -46,7 +42,7 @@ class InfoArea extends React.Component {
   }
 }
 
-export default InfoArea;
+export default AccordionGrid;
 
 const GET_INFO = gql`
   query getForceInfo($lng: Float, $lat: Float) {
