@@ -16,9 +16,12 @@ class AccordionGrid extends React.Component {
 
   render() {
     return (
-      <CustomAccordion title="Force Information">
-        <ForceInformation location={this.props.location} />
-      </CustomAccordion>
+      <div className={'accordion-grid-container'}>
+        <CustomAccordion title="Force Information">
+          <ForceInformation location={this.props.location} />
+        </CustomAccordion>
+        <div />
+      </div>
     );
   }
 }

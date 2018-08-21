@@ -6,7 +6,7 @@ import '../styling/map.less';
 import '../styling/footer.less';
 import '../styling/home.less';
 import '../styling/custom-accordion.less';
-
+import '../styling/accordion-grid.less';
 class Home extends React.Component {
   state = {
     mapLocation: START_LOCATION

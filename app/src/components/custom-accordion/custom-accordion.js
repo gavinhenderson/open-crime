@@ -14,7 +14,7 @@ class CustomAccordion extends React.Component {
     const { title, information, children } = this.props;
 
     return (
-      <Accordion styled>
+      <Accordion styled className={'custom-accordion'}>
         <Accordion.Title onClick={this.handleClick}>{title}</Accordion.Title>
         <Accordion.Content active={this.state.active}>
           {children}
