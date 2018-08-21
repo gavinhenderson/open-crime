@@ -5,6 +5,7 @@ import '../styling/nav-bar.less';
 import '../styling/map.less';
 import '../styling/footer.less';
 import '../styling/home.less';
+import '../styling/custom-accordion.less';
 
 class Home extends React.Component {
   state = {

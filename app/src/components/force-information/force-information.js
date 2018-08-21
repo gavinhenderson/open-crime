@@ -15,7 +15,7 @@ const ForceInfo = ({ location }) => (
 
       const { force } = data.locateNeighbourhood;
 
-      if (!force) return null;
+      if (!force) return <p>We don't have data for the foce in this area</p>;
 
       return (
         <Query query={FORCE_INFO} variables={{ forceId: force }}>
@@ -23,22 +23,45 @@ const ForceInfo = ({ location }) => (
             if (loading) return <p>Loading...</p>;
             if (error) {
               console.log(error);
-              return null;
+              return <p>We don't have data for the foce in this area</p>;
             }
 
             const { force, forcePeople } = data;
 
-            if (!force) return null;
+            if (!force)
+              return <p>We don't have data for the foce in this area</p>;
 
             console.log(force.engagement_methods);
             return (
               <div>
-                {force.description && (
-                  <p>{force.description.replace(/<(?:.|\n)*?>/gm, '')}</p>
+                {force.name && (
+                  <p>
+                    <span className={'accordion-content-label'}>Name: </span>
+                    {force.name}
+                  </p>
                 )}
-                {force.url && <p>{force.url}</p>}
-                {force.telephone && <p>{force.telephone}</p>}
-                {force.name && <p>{force.name}</p>}
+                {force.url && (
+                  <p>
+                    <span className={'accordion-content-label'}>Website: </span>
+                    <a href={force.url}>{removedProtocolFromUrl(force.url)}</a>
+                  </p>
+                )}
+                {force.telephone && (
+                  <p>
+                    <span className={'accordion-content-label'}>
+                      Phone Number:{' '}
+                    </span>
+                    {force.telephone}
+                  </p>
+                )}
+                {force.description && (
+                  <p>
+                    <span className={'accordion-content-label'}>
+                      Description:{' '}
+                    </span>
+                    {force.description.replace(/<(?:.|\n)*?>/gm, '')}
+                  </p>
+                )}
 
                 {/* {forcePeople.map(person => ())}
                     {forcePeople.mma.engagement_methods.map((currentMethod, index) => (
@@ -60,6 +83,10 @@ const ForceInfo = ({ location }) => (
     }}
   </Query>
 );
+
+const removedProtocolFromUrl = url => {
+  return url.split('//').pop();
+};
 
 export default ForceInfo;
 
