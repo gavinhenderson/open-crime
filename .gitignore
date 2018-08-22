@@ -5,6 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# dont commit build
+app/build
+
 # Docs
 api/docs
 api/schema.graphql
